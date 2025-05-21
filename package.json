@@ -1,5 +1,5 @@
 {
-	"name": "bun-returning-rewriter",
+	"name": "@angius/bun-returning-rewriter",
 	"version": "1.0.0",
 	"description": "A thin wrapper over HtmlRewriter providing support for returning data",
 	"keywords": ["bun", "rewriter", "typescript", "parser", "html"],
