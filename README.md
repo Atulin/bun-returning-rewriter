@@ -1,15 +1,34 @@
 # bun-returning-rewriter
 
-To install dependencies:
+## Usage
 
-```bash
-bun install
+```ts
+const html = `
+    <div data-foo="one"></div>
+    <div data-foo="two"></div>
+`
+
+const rewriter = new ReturningHtmlRewriter();
+rewriter.on('div[data-foo]', {
+    element(el, ctx) {
+        ctx.add({
+            name: el.tagName,
+            foo: el.getAttribute('data-foo')
+        })
+    }
+});
+const data = rewriter.parse(html);
+console.log(JSON.stringify(data, null, 4));
+/*
+[
+    {
+        "name": "div",
+        "foo": "one"
+    },
+    {
+        "name": "div",
+        "foo": "two"
+    }
+]
+*/
 ```
-
-To run:
-
-```bash
-bun run index.ts
-```
-
-This project was created using `bun init` in bun v1.2.12. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.

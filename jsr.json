@@ -1,0 +1,6 @@
+{
+	"name": "@angius/bun-returning-rewriter",
+	"version": "1.0.0",
+	"license": "MIT",
+	"exports": "./index.ts"
+}
