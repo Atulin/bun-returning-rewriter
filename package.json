@@ -1,6 +1,6 @@
 {
 	"name": "@angius/bun-returning-rewriter",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "A thin wrapper over HtmlRewriter providing support for returning data",
 	"keywords": ["bun", "rewriter", "typescript", "parser", "html"],
 	"homepage": "https://github.com/Atulin/bun-returning-rewriter#readme",
