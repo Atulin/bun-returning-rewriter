@@ -1,6 +1,6 @@
 {
 	"name": "@angius/bun-returning-rewriter",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "A thin wrapper over HtmlRewriter providing support for returning data",
 	"keywords": ["bun", "rewriter", "typescript", "parser", "html"],
 	"homepage": "https://github.com/Atulin/bun-returning-rewriter#readme",
@@ -22,14 +22,14 @@
 		"access": "public"
 	},
 	"scripts": {
-		"build": "bun run build:ts",
-		"build:ts": "bun build ./index.ts --outdir ./dist --target bun --dts",
+		"build": "bun ./build.ts",
 		"lint": "bunx @biomejs/biome check --apply-unsafe .",
 		"format": "bunx @biomejs/biome format --write ."
 	},
 	"devDependencies": {
 		"@biomejs/biome": "1.9.4",
-		"@types/bun": "latest"
+		"@types/bun": "latest",
+		"bun-plugin-isolated-decl": "^0.2.4"
 	},
 	"peerDependencies": {
 		"typescript": "^5",
